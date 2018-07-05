@@ -1,4 +1,13 @@
 def oxford_comma(array)
-array=["fiddleheads","okra","kohlrabi"]
-array.join(",")
+    if array.count <= 1
+    array.join
+  elsif array.count == 2
+    array.join(" and ")
+  else
+    last = array.pop
+    array.join(", ") + ", and " << last
+  end
 end
+
+
+
